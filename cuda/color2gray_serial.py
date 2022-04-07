@@ -6,7 +6,7 @@ from PIL import Image
 Image.MAX_IMAGE_PIXELS = 1000000000 
 
 # Read Images
-infile = "greeley.jpg"
+infile = "/cm/shared/data/DIV8K_train_HR/1401.png"
 img = plt.imread(infile)
 orig = np.asarray(img)
 
