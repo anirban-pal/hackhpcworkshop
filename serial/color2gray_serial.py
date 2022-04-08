@@ -17,6 +17,7 @@ for i in range(1,num_imgs+1):
     infile = "/cm/shared/data/DIV2K_train_HR/{:04d}.png".format(i)
     img = plt.imread(infile)
 
+    # Convert to grayscale
     orig = np.asarray(img)
     gray = (0.2989 * orig[:,:,0] + 0.5870 * orig[:,:,1] + 0.1140 * orig[:,:,2])*255
 
