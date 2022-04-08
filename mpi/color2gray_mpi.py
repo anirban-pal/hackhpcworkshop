@@ -16,20 +16,20 @@ world_size = world_comm.Get_size()
 my_rank = world_comm.Get_rank()
 
 num_imgs = 800
-# Read Images
 for i in range(1,num_imgs+1):
     
 	if (i % world_size == my_rank):
-		infile = "/cm/shared/data/DIV2K_train_HR/{:04d}.png".format(i)
-		outfile = "grayscale/{:04d}.png".format(i)
 		
+		# Read Images
+		infile = "/cm/shared/data/DIV2K_train_HR/{:04d}.png".format(i)
 		img = plt.imread(infile)
 		
+		# Convert image to grayscale
 		orig = np.asarray(img)
-		
 		gray = (0.2989 * orig[:,:,0] + 0.5870 * orig[:,:,1] + 0.1140 * orig[:,:,2])*255
 		
 		# Output Images
+		outfile = "grayscale/{:04d}.png".format(i)
 		plt.imsave(outfile, gray, cmap="gray")
 		print(outfile, "processor ", my_rank)
 
