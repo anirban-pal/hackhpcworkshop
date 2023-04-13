@@ -6,7 +6,7 @@
 #SBATCH --error=log.slurm.err
 #SBATCH --time=10:00:00
 
-module load slurm/18.08.9
-module load spack/python/3.8.12
+module load slurm/20.11.9
+module load spack/python/3.9.12
 
 srun python simple.py 
