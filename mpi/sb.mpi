@@ -7,10 +7,10 @@
 #SBATCH --time=02:00:00
 
 module purge
-module load slurm/18.08.9 
-module load spack/python/3.8.12
-module load spack/openmpi/4.1.1
-module load spack/py-mpi4py/3.1.2
-module load pip-pkgs/latest
+module load slurm/20.11.9
+module load spack19/python/3.10.8
+module load spack19/openmpi/4.1.3
+module load spack19/py-mpi4py/3.1.4
+module load pip22-pkgs/latest
 
-srun --mpi=pmi2 python color2gray_mpi.py 
+srun --mpi=pmi2 python color2gray_mpi.py
