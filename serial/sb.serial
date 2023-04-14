@@ -7,8 +7,8 @@
 #SBATCH --time=10:00:00
 
 module purge
-module load slurm/18.08.9
-module load spack/python/3.8.12
-module load pip-pkgs/latest
+module load slurm/20.11.9
+module load spack19/python/3.10.8
+module load pip22-pkgs/latest
 
-srun python color2gray_serial.py 
+srun python color2gray_serial.py
